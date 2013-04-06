@@ -18,6 +18,10 @@ end
 module Rails3BootstrapDeviseCancan
   class Application < Rails::Application
 
+    if Rails.env == "production"
+      config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-3887472-9")
+    end
+
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       
