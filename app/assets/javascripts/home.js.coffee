@@ -39,8 +39,21 @@
             when 2
               [(Number)(parts[0]), (Number)(parts[1])]
           marker = new google.maps.Marker
+            map: map
             position: new google.maps.LatLng(latLng...)
-          marker.setMap map
+            animation: google.maps.Animation.DROP
+            icon: 
+              path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z'
+              fillColor: "yellow"
+              fillOpacity: 0.5
+              scale: 0.05
+              strokeColor: "gold"
+              strokeWeight: 2
+
+          google.maps.event.addListener marker, 'click', () ->
+            map.setZoom(map.getZoom()+1)
+            map.setCenter @.getPosition()
+            
           bounds.extend (new google.maps.LatLng(latLng...))
 
         map.fitBounds bounds
