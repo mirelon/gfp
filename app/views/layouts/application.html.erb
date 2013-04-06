@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails3 Bootstrap Devise Cancan" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails3 Bootstrap Devise Cancan" %>">
+    <title>GFP: Geocaching Final Possibilities</title>
+    <meta name="description" content="Geocaching final possibilities shown as a grid on a map">
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVCN3PIuccYa7M4hjtSZNTfiKyWZKg8jc&sensor=false" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
