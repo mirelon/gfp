@@ -42,13 +42,7 @@
             map: map
             position: new google.maps.LatLng(latLng...)
             animation: google.maps.Animation.DROP
-            icon: 
-              path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z'
-              fillColor: "yellow"
-              fillOpacity: 0.5
-              scale: 0.05
-              strokeColor: "gold"
-              strokeWeight: 1
+            icon: 'https://chart.googleapis.com/chart?chst=d_map_spin&chld=0.25%7C0%7CFF0000%7C000000'
 
           google.maps.event.addListener marker, 'click', () ->
             map.setZoom(map.getZoom()+1)
