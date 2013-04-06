@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #map-canvas {
-  width: 400px;
-  height: 300px; 
+  width: 1100px;
+  height: 600px;
+  img {
+    max-width: none;
+  }
 }
