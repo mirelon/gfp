@@ -48,12 +48,12 @@
               fillOpacity: 0.5
               scale: 0.05
               strokeColor: "gold"
-              strokeWeight: 2
+              strokeWeight: 1
 
           google.maps.event.addListener marker, 'click', () ->
             map.setZoom(map.getZoom()+1)
             map.setCenter @.getPosition()
-            
+
           bounds.extend (new google.maps.LatLng(latLng...))
 
         map.fitBounds bounds
