@@ -4,7 +4,7 @@
     if @coords != $('#coordinates_input #coords').val()
       console.log "change from " + @coords + " to " + $('#coordinates_input #coords').val()
       @coords = $('#coordinates_input #coords').val()
-      parts = @coords.split(/[^\d\.]/).filter (part) -> part isnt ""
+      parts = @coords.split(/[^\d\.\?]/).filter (part) -> part isnt ""
       lat = ""
       lng = ""
       ok = true
@@ -26,6 +26,10 @@
           center: new google.maps.LatLng(lat, lng)
           mapTypeId: google.maps.MapTypeId.SATELLITE
         map = new google.maps.Map $("#map-canvas").get(0), mapOptions
+        marker = new google.maps.Marker
+          position: new google.maps.LatLng(lat, lng)
+          title: "Hello"
+        marker.setMap map
 
 $ ->
 
