@@ -5,7 +5,12 @@
 #map-canvas {
   width: 1100px;
   height: 600px;
+  border: 1px solid black;
   img {
     max-width: none;
+  }
+  p.center {
+    margin-top: 250px;
+    text-align:center;
   }
 }
